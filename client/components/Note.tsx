@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ModalEdit from "../components/ModalEdit";
 export default function Note() {
-  const [lyrics, setLyrics] = useState([]);
+  const [lyrics, setLyrics] = useState<any[]>([]);
   const [showModal, setModal] = useState(false);
   const [specific, setSpecific] = useState([]);
 
@@ -65,7 +65,7 @@ export default function Note() {
           </button>
         </div>
       ))}
-      {showModal && <ModalEdit onClose={handleOnClose} specific={specific} />}
+      {showModal && <ModalEdit onClose={handleOnClose} specifics={specific} />}
     </div>
   );
 }

@@ -1,13 +1,13 @@
 import { MouseEventHandler, useState } from "react";
 
 export default function ModalEdit(props: {
-  specific: { note_id: number; title: string; lyrics: string };
+  specifics: { note_id: number; title: string; lyrics: string };
   onClose: MouseEventHandler<HTMLButtonElement> | undefined;
 }) {
   const [notePad, setNotepad] = useState({
-    note_id: props.specific.note_id,
-    title: props.specific.title,
-    lyrics: props.specific.lyrics,
+    note_id: props.specifics.note_id,
+    title: props.specifics.title,
+    lyrics: props.specifics.lyrics,
   });
 
   async function updateLyrics(event: { preventDefault: () => void }) {
