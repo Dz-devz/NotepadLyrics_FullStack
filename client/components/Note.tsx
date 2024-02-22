@@ -3,7 +3,7 @@ import ModalEdit from "../components/ModalEdit";
 export default function Note() {
   const [lyrics, setLyrics] = useState<any[]>([]);
   const [showModal, setModal] = useState(false);
-  const [specific, setSpecific] = useState([]);
+  const [specific, setSpecific] = useState<any>([]);
 
   function handleOnClose() {
     setModal(false);
