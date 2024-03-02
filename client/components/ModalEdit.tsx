@@ -1,7 +1,7 @@
 import { MouseEventHandler, useState } from "react";
 
 export default function ModalEdit(props: {
-  specifics: { note_id: any; title: any; lyrics: any };
+  specifics: { note_id: number; title: string; lyrics: string };
   onClose: MouseEventHandler<HTMLButtonElement> | undefined;
 }) {
   const [notePad, setNotepad] = useState({

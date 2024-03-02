@@ -34,13 +34,13 @@ export default function Notepad() {
 
   return (
     <div>
-      <h1 className="font-bold text-center text-[2rem] text-black ">
+      <h1 className="font-bold text-center text-[2rem]  text-zinc-900">
         Lyrics Notepad
       </h1>
       <div>
-        <form className="relative w-[480px] mt-[30px] mr-auto mb-[20px] ml-auto shadow-lg shadow-[#28231D]  p-[15px] rounded-[7px] text-center">
+        <form className="relative pb-[100px] max-w-[50%] mt-[30px] mr-auto mb-[20px] ml-auto shadow-lg shadow-[#28231D] p-[15px] rounded-[7px] text-center">
           <input
-            className=" text-black shadow-md w-[100%] p-1 outline-none text-xl resize-none text-center"
+            className="text-zinc-900 shadow-md w-[100%] p-1 outline-none text-xl resize-none text-center"
             type="text"
             name="title"
             value={input.title}
@@ -48,7 +48,7 @@ export default function Notepad() {
             onChange={handleInput}
           />
           <textarea
-            className="bg-[#] text-black w-[100%] p-1 outline-none text-xl resize-none text-center"
+            className="text-zinc-900 w-[100%] p-1 outline-none text-xl resize-none text-center"
             name="lyrics"
             rows={5}
             placeholder="Type your lyrics here."
@@ -56,7 +56,7 @@ export default function Notepad() {
             onChange={handleInput}
           />
           <button
-            className="bg-[#28231D] text-white rounded-md float-right w-[50px] h-[36px] mr-[10px] outline-none cursor-pointer"
+            className="bg-zinc-800 text-white mt-20 rounded-md float-right w-[50px] h-[36px] mr-[8px] outline-none cursor-pointer"
             onClick={submitNote}
           >
             Add
