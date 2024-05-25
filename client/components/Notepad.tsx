@@ -6,7 +6,7 @@ export default function Notepad() {
     lyrics: "",
   });
 
-  function handleInput(event: { target: { name: string; value: unknown } }) {
+  function handleInput(event: { target: { name: string; value: string } }) {
     const { name, value } = event.target;
     setInput((prevInput) => {
       return {

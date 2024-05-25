@@ -1,13 +1,18 @@
-import { MouseEventHandler, useState } from "react";
+import { useState } from "react";
+import { Lyric } from "../components/Note";
 
-export default function ModalEdit(props: {
-  specifics: { note_id: number; title: string; lyrics: string };
-  onClose: MouseEventHandler<HTMLButtonElement> | undefined;
-}) {
+interface ModalEditProps {
+  onClose: () => void;
+  specifics: Lyric;
+}
+
+export default function ModalEditProps(props: ModalEditProps) {
+  const { onClose, specifics } = props;
+
   const [notePad, setNotepad] = useState({
-    note_id: props.specifics.note_id,
-    title: props.specifics.title,
-    lyrics: props.specifics.lyrics,
+    note_id: specifics.note_id,
+    title: specifics.title,
+    lyrics: specifics.lyrics,
   });
 
   async function updateLyrics(event: { preventDefault: () => void }) {
@@ -55,7 +60,7 @@ export default function ModalEdit(props: {
             Save
           </button>
           <button
-            onClick={props.onClose}
+            onClick={onClose}
             className=" px-5 py-2 bg-gray-700 text-white rounded"
           >
             Close
