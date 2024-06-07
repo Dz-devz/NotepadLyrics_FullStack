@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ModalEdit from "../components/ModalEdit";
+import ModalEdit from "./ModalEdit";
 
 export interface Lyric {
   note_id: number;

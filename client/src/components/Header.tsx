@@ -1,4 +1,4 @@
-import DzLogo from "../src/assets/DzLogo.png";
+import DzLogo from "../../public/image/DzLogo.png";
 
 export default function Header() {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Lyric } from "../components/Note";
+import { Lyric } from "./Note";
 
 interface ModalEditProps {
   onClose: () => void;
