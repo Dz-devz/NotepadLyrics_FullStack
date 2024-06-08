@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Home from "./components/Home";
 import Note from "./components/Note";
 import Notepad from "./components/Notepad";
 
@@ -25,6 +26,10 @@ export default function App() {
       path: "/",
       element: <Layout />,
       children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
         {
           path: "notes",
           element: <Note />,
